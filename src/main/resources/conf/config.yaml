@@ -1,0 +1,19 @@
+## ------------------------------------------------
+## 設定情報 
+## MQTTサービス : sango(https://sango.shiguredo.jp/)
+## プラン : Lite プラン
+## ------------------------------------------------
+broker: 
+  tcp: "tcp://localhost:1883"
+  username: "ユーザー名"
+  password: "パスワード"
+
+publish:
+  topic: "アクセス先トピック" ## 最後の # は 違うものに変更しましょう。 うまく Pub/Sub できません。
+  qos: 0 ## Lite プランは 0 のみ指定できます。
+  clientId: "Publisher"
+
+subscribe:
+  topic: "アクセス先トピック" ## 最後の # は 違うものに変更しましょう。 うまく Pub/Sub できません。
+  qos: 0 ## Lite プランは 0 のみ指定できます。
+  clientId: "Subscriber"
